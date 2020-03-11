@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bornindecember.github.io</id>
-    <title>Born in decembe。</title>
-    <updated>2020-03-11T07:33:46.266Z</updated>
+    <title>Born in december。</title>
+    <updated>2020-03-11T07:44:44.755Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bornindecember.github.io"/>
     <link rel="self" href="https://bornindecember.github.io/atom.xml"/>
     <subtitle>Come on !</subtitle>
     <logo>https://bornindecember.github.io/images/avatar.png</logo>
     <icon>https://bornindecember.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Born in decembe。</rights>
+    <rights>All rights reserved 2020, Born in december。</rights>
     <entry>
         <title type="html"><![CDATA[美好]]></title>
         <id>https://bornindecember.github.io/post/mei-hao/</id>
