@@ -78,14 +78,36 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">美好</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">安装 jupyter notebook</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2020-03-11 / 1 min read
+          2020-06-22 / 1 min read
         </div>
         
         <div class="post-content yue">
-          <p>2020-03-11<br>
-开始测试一下</p>
+          <p>0.conda install jupyter notebook<br>
+conda安装<br>
+1.设置密码获得秘钥<br>
+ipython</p>
+<p>In [1]: from IPython.lib import passwd<br>
+In [2]: passwd()<br>
+Enter password:<br>
+Verify password:<br>
+Out[2]: 'sha1:004e6c73a2b8:ff3d9bbc53。。。。。。。。'</p>
+<p>2.生成配置文件</p>
+<p>jupyter notebook --generate-config<br>
+Writing default config to: /home/daiwenzhu/.jupyter/jupyter_notebook_config.py</p>
+<p>3.修改配置文件内容</p>
+<p>c.NotebookApp.ip = '*'<br>
+c.NotebookApp.allow_root = True<br>
+c.NotebookApp.open_browser = False<br>
+c.NotebookApp.port = 8888<br>
+c.NotebookApp.password =<br>
+'sha1:004e6c73a2b8:ff3d9bbc53。。。。。。。。' #输入上面加密后得到的密文<br>
+c.ContentsManager.root_dir = '/December/python/jupyter_notebook'</p>
+<p>4.运行<br>
+<img src="https://bornindecember.github.io/post-images/1592809047817.png" alt="" loading="lazy"></p>
+<p>输入网址： http://62.234.152.235:8888/<br>
+<img src="https://bornindecember.github.io/post-images/1592809018591.png" alt="" loading="lazy"></p>
 
         </div>
 
@@ -94,16 +116,16 @@
 
         <div class="flex justify-between py-8">
           
-            <div class="prev-post">
-              <a href="https://bornindecember.github.io/post/an-zhuang-jupyter-notebook/">
+
+          
+            <div class="next-post">
+              <a href="https://bornindecember.github.io/post/mei-hao/">
                 <h3 class="post-title">
-                  <i class="ri-arrow-left-line"></i>
-                  安装 jupyter notebook
+                  美好
+                  <i class="ri-arrow-right-line"></i>
                 </h3>
               </a>
             </div>
-          
-
           
         </div>
 
