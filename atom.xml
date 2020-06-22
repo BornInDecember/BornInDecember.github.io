@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bornindecember.github.io</id>
     <title>Born in december。</title>
-    <updated>2020-06-22T07:01:52.788Z</updated>
+    <updated>2020-06-22T07:07:10.667Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bornindecember.github.io"/>
     <link rel="self" href="https://bornindecember.github.io/atom.xml"/>
@@ -16,26 +16,30 @@
         <link href="https://bornindecember.github.io/post/an-zhuang-jupyter-notebook/">
         </link>
         <updated>2020-06-22T06:51:34.000Z</updated>
-        <content type="html"><![CDATA[<p>0.conda install jupyter notebook<br>
-conda安装<br>
-1.设置密码获得秘钥<br>
-ipython</p>
-<p>In [1]: from IPython.lib import passwd<br>
-In [2]: passwd()<br>
-Enter password:<br>
-Verify password:<br>
-Out[2]: 'sha1:004e6c73a2b8:ff3d9bbc53。。。。。。。。'</p>
+        <content type="html"><![CDATA[<p>0.conda安装<br>
+<code>conda install jupyter notebook</code><br>
+1.设置密码获得秘钥</p>
+<pre><code>ipython
+
+In [1]: from IPython.lib import passwd                                                                                
+In [2]: passwd()                                                                          
+Enter password: 
+Verify password: 
+Out[2]: 'sha1:004e6c73a2b8:ff3d9bbc53。。。。。。。。'
+</code></pre>
 <p>2.生成配置文件</p>
-<p>jupyter notebook --generate-config<br>
-Writing default config to: /home/daiwenzhu/.jupyter/jupyter_notebook_config.py</p>
+<pre><code> jupyter notebook --generate-config
+Writing default config to: /home/daiwenzhu/.jupyter/jupyter_notebook_config.py
+</code></pre>
 <p>3.修改配置文件内容</p>
-<p>c.NotebookApp.ip = '*'<br>
-c.NotebookApp.allow_root = True<br>
-c.NotebookApp.open_browser = False<br>
-c.NotebookApp.port = 8888<br>
-c.NotebookApp.password =<br>
-'sha1:004e6c73a2b8:ff3d9bbc53。。。。。。。。' #输入上面加密后得到的密文<br>
-c.ContentsManager.root_dir = '/December/python/jupyter_notebook'</p>
+<pre><code>c.NotebookApp.ip = '*'
+c.NotebookApp.allow_root = True
+c.NotebookApp.open_browser = False
+c.NotebookApp.port = 8888
+c.NotebookApp.password =
+ 'sha1:004e6c73a2b8:ff3d9bbc53。。。。。。。。' #输入上面加密后得到的密文
+c.ContentsManager.root_dir = '/December/python/jupyter_notebook'
+</code></pre>
 <p>4.运行<br>
 <img src="https://bornindecember.github.io/post-images/1592809047817.png" alt="" loading="lazy"></p>
 <p>输入网址： http://62.234.152.235:8888/<br>

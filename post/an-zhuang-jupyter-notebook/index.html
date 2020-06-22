@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Born in december。</title>
 <meta name="description" content="Come on !" />
-<link rel="shortcut icon" href="https://bornindecember.github.io/favicon.ico?v=1592809311069">
+<link rel="shortcut icon" href="https://bornindecember.github.io/favicon.ico?v=1592809628727">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
@@ -23,7 +23,7 @@
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
         <a href="https://bornindecember.github.io">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://bornindecember.github.io/images/avatar.png?v=1592809311069" alt="">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://bornindecember.github.io/images/avatar.png?v=1592809628727" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Born in december。</h1>
       </div>
@@ -84,26 +84,30 @@
         </div>
         
         <div class="post-content yue">
-          <p>0.conda install jupyter notebook<br>
-conda安装<br>
-1.设置密码获得秘钥<br>
-ipython</p>
-<p>In [1]: from IPython.lib import passwd<br>
-In [2]: passwd()<br>
-Enter password:<br>
-Verify password:<br>
-Out[2]: 'sha1:004e6c73a2b8:ff3d9bbc53。。。。。。。。'</p>
+          <p>0.conda安装<br>
+<code>conda install jupyter notebook</code><br>
+1.设置密码获得秘钥</p>
+<pre><code>ipython
+
+In [1]: from IPython.lib import passwd                                                                                
+In [2]: passwd()                                                                          
+Enter password: 
+Verify password: 
+Out[2]: 'sha1:004e6c73a2b8:ff3d9bbc53。。。。。。。。'
+</code></pre>
 <p>2.生成配置文件</p>
-<p>jupyter notebook --generate-config<br>
-Writing default config to: /home/daiwenzhu/.jupyter/jupyter_notebook_config.py</p>
+<pre><code> jupyter notebook --generate-config
+Writing default config to: /home/daiwenzhu/.jupyter/jupyter_notebook_config.py
+</code></pre>
 <p>3.修改配置文件内容</p>
-<p>c.NotebookApp.ip = '*'<br>
-c.NotebookApp.allow_root = True<br>
-c.NotebookApp.open_browser = False<br>
-c.NotebookApp.port = 8888<br>
-c.NotebookApp.password =<br>
-'sha1:004e6c73a2b8:ff3d9bbc53。。。。。。。。' #输入上面加密后得到的密文<br>
-c.ContentsManager.root_dir = '/December/python/jupyter_notebook'</p>
+<pre><code>c.NotebookApp.ip = '*'
+c.NotebookApp.allow_root = True
+c.NotebookApp.open_browser = False
+c.NotebookApp.port = 8888
+c.NotebookApp.password =
+ 'sha1:004e6c73a2b8:ff3d9bbc53。。。。。。。。' #输入上面加密后得到的密文
+c.ContentsManager.root_dir = '/December/python/jupyter_notebook'
+</code></pre>
 <p>4.运行<br>
 <img src="https://bornindecember.github.io/post-images/1592809047817.png" alt="" loading="lazy"></p>
 <p>输入网址： http://62.234.152.235:8888/<br>
