@@ -2,7 +2,7 @@
 <html lang="zh-CN">
  <head>
      <meta charset="utf-8" />
-  <title>美好 | Born in december。</title>
+  <title>Git Gitlab linux | Born in december。</title>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
   <link rel="stylesheet" href="https://bornindecember.github.io/styles/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -79,19 +79,66 @@
      <div class="post-page">
       <div class="post animated fadeInDown">
        <div class="post-title">
-        <h3><a>美好</a></h3>
+        <h3><a>Git Gitlab linux</a></h3>
        </div>
        <div class="post-content">
-        <p>2020-03-11<br>
-开始测试一下</p>
+        <!-- more -->
+<figure data-type="image" tabindex="1"><img src="https://bornindecember.github.io/post-images/1583982747374.png" alt="" loading="lazy"></figure>
+<ul>
+<li><strong>文件夹推送</strong><br>
+cd *进入要上传的文件夹<br>
+git init #初始化当前文件夹</li>
+<li><strong>将本地的文件夹推送到Gitlab</strong></li>
+</ul>
+<pre><code>git remote add origin git@gitdb.*/*git  #关联一个远程库
+git push -u origin master     # 推送本地 master 去 origin
+git push -u origin dev        # 推送本地 dev  去 origin
+</code></pre>
+<ul>
+<li><strong>如果在本地再进行修改, 然后推送到Gitlab</strong></li>
+</ul>
+<pre><code>git commit -am &quot;change&quot;
+git push -u origin master
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>学号</th>
+<th>姓名</th>
+<th>序号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>小明明</td>
+<td>男</td>
+<td>5</td>
+</tr>
+<tr>
+<td>小红</td>
+<td>女</td>
+<td>79</td>
+</tr>
+<tr>
+<td>小陆</td>
+<td>男</td>
+<td>192</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>请问 Markdwon 怎么用？ - 小白</p>
+</blockquote>
 
        </div>
        <div class="post-footer">
         <div class="meta">
          <div class="info">
           <i class="fa fa-sun-o"></i>
-          <span class="date">2020-03-11</span>
+          <span class="date">2020-03-12</span>
           <i class="fa fa-tag"></i>
+          
+          <a class="tag" href="https://bornindecember.github.io/tag/Pg9QDoRmK/" title="Git">Git </a>
           
          </div>
         </div>
@@ -105,14 +152,16 @@
         <a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a>
        </div>
        <div class="twitter">
-        <a class="fa fa-twitter" href="http://twitter.com/home?status=,https://bornindecember.github.io/post/mei-hao/,;"></a>
+        <a class="fa fa-twitter" href="http://twitter.com/home?status=,https://bornindecember.github.io/post/git-gitlab-linux/,;"></a>
        </div>
       </div>
       <div class="pagination">
        <ul class="clearfix">
 
-        <li class="pre pagbuttons"><a class="btn" role="navigation" href="https://bornindecember.github.io/post/git-gitlab-linux/" title="Git Gitlab linux">上一篇</a></li>
+        <li class="pre pagbuttons"><a class="btn" role="navigation" href="https://bornindecember.github.io/post/an-zhuang-jupyter-notebook/" title="安装 jupyter notebook">上一篇</a></li>
          
+        
+        <li class="next pagbuttons"><a class="btn" role="navigation" href="https://bornindecember.github.io/post/mei-hao/" title=" 美好">下一篇</a></li>
         
        </ul>
       </div>
