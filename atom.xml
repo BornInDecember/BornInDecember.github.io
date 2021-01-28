@@ -2,14 +2,56 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bornindecember.github.io</id>
     <title>Born in december。</title>
-    <updated>2020-10-21T02:52:33.159Z</updated>
+    <updated>2021-01-28T05:37:08.971Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bornindecember.github.io"/>
     <link rel="self" href="https://bornindecember.github.io/atom.xml"/>
     <subtitle>Come on !</subtitle>
     <logo>https://bornindecember.github.io/images/avatar.png</logo>
     <icon>https://bornindecember.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Born in december。</rights>
+    <rights>All rights reserved 2021, Born in december。</rights>
+    <entry>
+        <title type="html"><![CDATA[Typora]]></title>
+        <id>https://bornindecember.github.io/post/typora/</id>
+        <link href="https://bornindecember.github.io/post/typora/">
+        </link>
+        <updated>2021-01-28T05:35:50.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="1代码">1.代码</h3>
+<p><strong>单行代码</strong>：（一行代码或者一个单词的形式，文字也可以） <code>使用``</code></p>
+<p><strong>多行代码块</strong>：（代码块）<code>使用~~~ + 回车</code></p>
+<h3 id="2文本操作">2.文本操作</h3>
+<p><strong>标题：</strong> 表示方式为<code>“#” + 空格 + 标题内容</code>，“#”的个数依次增加，即可表示一到五级标题。快捷键的方式为 ctrl + 数字（1-5）</p>
+<p><strong>引用：</strong><code>&gt; +空格+我是引用</code>          <strong>加标注</strong><code>[^1]</code></p>
+<p><strong>居中：</strong> <code>&lt;center&gt;居中文本&lt;center&gt;</code></p>
+<p><strong>删除线：</strong> <code>~~我是删除线~~</code></p>
+<p><strong>斜体：</strong><code>*我是斜体*</code></p>
+<p><strong>强调：</strong><code>**强调**</code>或者<code>快捷键ctrl+B</code></p>
+<p><strong>下划线：</strong><code>快捷键ctrl+u</code></p>
+<h3 id="3列表操作">3.列表操作</h3>
+<p><strong>无序列表：</strong><code>使用+或者* +空格</code></p>
+<p><strong>有序列表：</strong><code>使用1. +空格</code></p>
+<p><strong>表格：</strong><code>快捷键ctrl+t</code></p>
+<h3 id="4数学公式">4.数学公式</h3>
+<p><code>输入两个$$ +回车</code></p>
+<h3 id="5图片插入">5.图片插入</h3>
+<ul>
+<li><strong>本地图片</strong><code>直接将图片拖入Typora</code></li>
+<li><strong>网络图片</strong><code>快捷键ctrl+shift+i</code>可输入网络图片链接地址</li>
+</ul>
+<h3 id="6超链接">6.超链接</h3>
+<ul>
+<li><strong>显示链接名称</strong><code>[链接提示]+（链接地址）</code></li>
+<li><strong>只显示url链接</strong><code>(链接地址)</code></li>
+</ul>
+<h3 id="7分割线">7.分割线</h3>
+<p><code>输入三个过三个以上- ，再回车</code></p>
+<h3 id="8其他">8.其他</h3>
+<ul>
+<li><strong>切换原文和语法</strong>：<code>ctrl+/</code></li>
+<li><strong>目录</strong>：<code>输入[toc],然后回车</code> 即可创建一个&quot;目录&quot;</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[安装 jupyter notebook]]></title>
         <id>https://bornindecember.github.io/post/an-zhuang-jupyter-notebook/</id>
@@ -99,16 +141,6 @@ git push -u origin master
 <blockquote>
 <p>请问 Markdwon 怎么用？ - 小白</p>
 </blockquote>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[美好]]></title>
-        <id>https://bornindecember.github.io/post/mei-hao/</id>
-        <link href="https://bornindecember.github.io/post/mei-hao/">
-        </link>
-        <updated>2020-03-11T03:28:22.000Z</updated>
-        <content type="html"><![CDATA[<p>2020-03-11<br>
-开始测试一下</p>
 ]]></content>
     </entry>
 </feed>
