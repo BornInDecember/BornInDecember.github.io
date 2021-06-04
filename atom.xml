@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bornindecember.github.io</id>
-    <title>Born in december。</title>
-    <updated>2021-06-04T05:23:59.383Z</updated>
+    <title>戴珠珠的图册~~</title>
+    <updated>2021-06-04T05:25:01.049Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bornindecember.github.io"/>
     <link rel="self" href="https://bornindecember.github.io/atom.xml"/>
     <subtitle>戴珠珠的图册~~</subtitle>
     <logo>https://bornindecember.github.io/images/avatar.png</logo>
     <icon>https://bornindecember.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, Born in december。</rights>
+    <rights>All rights reserved 2021, 戴珠珠的图册~~</rights>
     <entry>
         <title type="html"><![CDATA[ggplot2热图,带有范围值的颜色]]></title>
         <id>https://bornindecember.github.io/post/ggplot2-re-tu-dai-you-fan-wei-zhi-de-yan-se/</id>
