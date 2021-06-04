@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bornindecember.github.io</id>
     <title>Born in december。</title>
-    <updated>2021-06-04T02:52:32.339Z</updated>
+    <updated>2021-06-04T02:59:48.590Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bornindecember.github.io"/>
     <link rel="self" href="https://bornindecember.github.io/atom.xml"/>
@@ -16,7 +16,11 @@
         <link href="https://bornindecember.github.io/post/ggplot2-re-tu-dai-you-fan-wei-zhi-de-yan-se/">
         </link>
         <updated>2021-06-04T02:40:31.000Z</updated>
-        <content type="html"><![CDATA[<img src="https://gitee.com/DecemberD/online_picture/raw/master/png/20210604104618.png" alt="image-20210604104618148" style="zoom:50%;" />
+        <summary type="html"><![CDATA[<p>&lt;img src=&quot;https://gitee.com/DecemberD/online_picture/raw/master/png/20210604104618.png</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>&lt;img src=&quot;https://gitee.com/DecemberD/online_picture/raw/master/png/20210604104618.png</p>
+<!-- more -->
+<p>&quot; alt=&quot;image-20210604104618148&quot; style=&quot;zoom:50%;&quot; /&gt;</p>
 <blockquote>
 <p>引用http://www.voidcn.com/article/p-gwnhvusn-bsz.html</p>
 </blockquote>
@@ -115,61 +119,6 @@ c.ContentsManager.root_dir = '/December/python/jupyter_notebook'
 <img src="https://bornindecember.github.io/post-images/1592809047817.png" alt="" loading="lazy"></p>
 <p>输入网址： http://62.234.152.235:8888/<br>
 <img src="https://bornindecember.github.io/post-images/1592809018591.png" alt="" loading="lazy"></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Git Gitlab linux]]></title>
-        <id>https://bornindecember.github.io/post/git-gitlab-linux/</id>
-        <link href="https://bornindecember.github.io/post/git-gitlab-linux/">
-        </link>
-        <updated>2020-03-12T02:24:07.000Z</updated>
-        <content type="html"><![CDATA[<!-- more -->
-<figure data-type="image" tabindex="1"><img src="https://bornindecember.github.io/post-images/1583982747374.png" alt="" loading="lazy"></figure>
-<ul>
-<li><strong>文件夹推送</strong><br>
-cd *进入要上传的文件夹<br>
-git init #初始化当前文件夹</li>
-<li><strong>将本地的文件夹推送到Gitlab</strong></li>
-</ul>
-<pre><code>git remote add origin git@gitdb.*/*git  #关联一个远程库
-git push -u origin master     # 推送本地 master 去 origin
-git push -u origin dev        # 推送本地 dev  去 origin
-</code></pre>
-<ul>
-<li><strong>如果在本地再进行修改, 然后推送到Gitlab</strong></li>
-</ul>
-<pre><code>git commit -am &quot;change&quot;
-git push -u origin master
-</code></pre>
-<table>
-<thead>
-<tr>
-<th>学号</th>
-<th>姓名</th>
-<th>序号</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>小明明</td>
-<td>男</td>
-<td>5</td>
-</tr>
-<tr>
-<td>小红</td>
-<td>女</td>
-<td>79</td>
-</tr>
-<tr>
-<td>小陆</td>
-<td>男</td>
-<td>192</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>请问 Markdwon 怎么用？ - 小白</p>
-</blockquote>
 ]]></content>
     </entry>
 </feed>
