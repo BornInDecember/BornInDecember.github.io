@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bornindecember.github.io</id>
     <title>Born in december。</title>
-    <updated>2021-06-04T03:07:10.185Z</updated>
+    <updated>2021-06-04T03:07:59.931Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bornindecember.github.io"/>
     <link rel="self" href="https://bornindecember.github.io/atom.xml"/>
@@ -41,84 +41,6 @@ ggplot(data =  dat, aes(x = Row, y = Col)) +
       geom_tile(aes(fill = Y1), colour = &quot;white&quot;) +
       scale_fill_brewer(palette = &quot;PRGn&quot;)
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Typora]]></title>
-        <id>https://bornindecember.github.io/post/typora/</id>
-        <link href="https://bornindecember.github.io/post/typora/">
-        </link>
-        <updated>2021-01-28T05:35:50.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="1代码">1.代码</h3>
-<p><strong>单行代码</strong>：（一行代码或者一个单词的形式，文字也可以） <code>使用``</code></p>
-<p><strong>多行代码块</strong>：（代码块）<code>使用~~~ + 回车</code></p>
-<h3 id="2文本操作">2.文本操作</h3>
-<p><strong>标题：</strong> 表示方式为<code>“#” + 空格 + 标题内容</code>，“#”的个数依次增加，即可表示一到五级标题。快捷键的方式为 ctrl + 数字（1-5）</p>
-<p><strong>引用：</strong><code>&gt; +空格+我是引用</code>          <strong>加标注</strong><code>[^1]</code></p>
-<p><strong>居中：</strong> <code>&lt;center&gt;居中文本&lt;center&gt;</code></p>
-<p><strong>删除线：</strong> <code>~~我是删除线~~</code></p>
-<p><strong>斜体：</strong><code>*我是斜体*</code></p>
-<p><strong>强调：</strong><code>**强调**</code>或者<code>快捷键ctrl+B</code></p>
-<p><strong>下划线：</strong><code>快捷键ctrl+u</code></p>
-<h3 id="3列表操作">3.列表操作</h3>
-<p><strong>无序列表：</strong><code>使用+或者* +空格</code></p>
-<p><strong>有序列表：</strong><code>使用1. +空格</code></p>
-<p><strong>表格：</strong><code>快捷键ctrl+t</code></p>
-<h3 id="4数学公式">4.数学公式</h3>
-<p><code>输入两个$$ +回车</code></p>
-<h3 id="5图片插入">5.图片插入</h3>
-<ul>
-<li><strong>本地图片</strong><code>直接将图片拖入Typora</code></li>
-<li><strong>网络图片</strong><code>快捷键ctrl+shift+i</code>可输入网络图片链接地址</li>
-</ul>
-<h3 id="6超链接">6.超链接</h3>
-<ul>
-<li><strong>显示链接名称</strong><code>[链接提示]+（链接地址）</code></li>
-<li><strong>只显示url链接</strong><code>(链接地址)</code></li>
-</ul>
-<h3 id="7分割线">7.分割线</h3>
-<p><code>输入三个过三个以上- ，再回车</code></p>
-<h3 id="8其他">8.其他</h3>
-<ul>
-<li><strong>切换原文和语法</strong>：<code>ctrl+/</code></li>
-<li><strong>目录</strong>：<code>输入[toc],然后回车</code> 即可创建一个&quot;目录&quot;</li>
-</ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[安装 jupyter notebook]]></title>
-        <id>https://bornindecember.github.io/post/an-zhuang-jupyter-notebook/</id>
-        <link href="https://bornindecember.github.io/post/an-zhuang-jupyter-notebook/">
-        </link>
-        <updated>2020-06-22T06:51:34.000Z</updated>
-        <content type="html"><![CDATA[<p>0.conda安装<br>
-<code>conda install jupyter notebook</code><br>
-1.设置密码获得秘钥</p>
-<pre><code>ipython
-
-In [1]: from IPython.lib import passwd                                                                                
-In [2]: passwd()                                                                          
-Enter password: 
-Verify password: 
-Out[2]: 'sha1:004e6c73a2b8:ff3d9bbc53。。。。。。。。'
-</code></pre>
-<p>2.生成配置文件</p>
-<pre><code> jupyter notebook --generate-config
-Writing default config to: /home/daiwenzhu/.jupyter/jupyter_notebook_config.py
-</code></pre>
-<p>3.修改配置文件内容</p>
-<pre><code>c.NotebookApp.ip = '*'
-c.NotebookApp.allow_root = True
-c.NotebookApp.open_browser = False
-c.NotebookApp.port = 8888
-c.NotebookApp.password =
- 'sha1:004e6c73a2b8:ff3d9bbc53。。。。。。。。' #输入上面加密后得到的密文
-c.ContentsManager.root_dir = '/December/python/jupyter_notebook'
-</code></pre>
-<p>4.运行<br>
-<img src="https://bornindecember.github.io/post-images/1592809047817.png" alt="" loading="lazy"></p>
-<p>输入网址： http://62.234.152.235:8888/<br>
-<img src="https://bornindecember.github.io/post-images/1592809018591.png" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
 </feed>
