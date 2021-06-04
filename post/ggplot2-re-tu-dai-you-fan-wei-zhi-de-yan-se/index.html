@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <title>Born in december。</title>
@@ -35,7 +35,7 @@
 
 </head>
 <body>
-<div id="fh5co-offcanvas">
+    <div id="fh5co-offcanvas">
     <a href="#!" class="fh5co-close-offcanvas js-fh5co-close-offcanvas">
         <span><i class="icon-cross3"></i> <span>Close</span></span>
     </a>
@@ -143,55 +143,110 @@
 </header>
 
 
-<div class="container-fluid">
+    <!--  <a href="#" class="fh5co-post-prev"><span>👈 Prev</span></a>-->
+    <!--  <a href="#" class="fh5co-post-next"><span>Next 👉</span></a>-->
 
-  <div class="col-lg-12 col-md-12 text-center tag-title">
-      <i class="fa fa-tag"></i> 标签: <h3>jupyter</h3>
-  </div>
-
-  <div class="row fh5co-post-entry">
-
+    <!-- 等gridea出自定义页面功能再优化一下 -->
     
-      <article class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-xxs-12 animate-box article-box" style="height: 25em;">
-        <figure class="img-box">
-          <a href="https://bornindecember.github.io/post/an-zhuang-jupyter-notebook/">
-            
-          </a>
-        </figure>
-        <span class="fh5co-meta">
-          
-            <div class="tag-container">
-              
-                <a href="https://bornindecember.github.io/tag/v7kQDlc4m/" class="tag">python, </a>
-              
-                <a href="https://bornindecember.github.io/tag/Y1ONv9u_Y/" class="tag">jupyter, </a>
-              
+        <div class="container-fluid">
+    <div class="row fh5co-post-entry single-entry">
+        <article class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
+            <figure class="animate-box">
+                
+            </figure>
+            <span class="fh5co-meta animate-box">
+                
+                    <div class="tag-container">
+                        
+                            <a href="https://bornindecember.github.io/tag/XbbP5rSgM/" class="tag">热图, </a>
+                        
+                            <a href="https://bornindecember.github.io/tag/82VCyGO_x/" class="tag">R, </a>
+                        
+                    </div>
+                
+            </span>
+            <h2 class="fh5co-article-title animate-box">ggplot2热图,带有范围值的颜色</h2>
+            <ol class="breadcrumb fh5co-meta fh5co-date animate-box" style="margin-bottom:0; background-color:#f8f9fa">
+                <li>2021-06-04</li>
+                <li>107字</li>
+                <li>1 min read</li>
+            </ol>
+
+            <div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-left content-article">
+                <div class="row">
+                    <div class="col-md-12 animate-box post-content">
+                        <p> <img src="https://gitee.com/DecemberD/online_picture/raw/master/png/20210604104618.png" alt="image-20210604104618148" style="zoom:50%;" />
+<blockquote>
+<p>引用http://www.voidcn.com/article/p-gwnhvusn-bsz.html</p>
+</blockquote>
+<pre><code class="language-R">set.seed(12345)
+dat &lt;- 
+  data.frame(
+      Row = rep(x = LETTERS[1:5], times = 10)
+    , Col = rep(x = LETTERS[1:10], each = 5)
+    , Y = rnorm(n = 50, mean = 0, sd = 1)
+    )
+library(ggplot2)
+p &lt;- ggplot(data =  dat, aes(x = Row, y = Col)) + 
+      geom_tile(aes(fill = Y), colour = &quot;white&quot;) +
+      scale_fill_gradient(low = &quot;white&quot;, high = &quot;steelblue&quot;)
+p
+dat$Y1 &lt;- cut(dat$Y,breaks = c(-Inf,-3:3,Inf),right = FALSE)
+ggplot(data =  dat, aes(x = Row, y = Col)) + 
+      geom_tile(aes(fill = Y1), colour = &quot;white&quot;) +
+      scale_fill_brewer(palette = &quot;PRGn&quot;)
+</code></pre>
+ </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 animate-box">
+                        
+                            <div class="next-post">
+                                <div class="next">下一篇</div>
+                                <a href="https://bornindecember.github.io/post/typora/">
+                                    <h3 class="post-title">
+                                        Typora
+                                    </h3>
+                                </a>
+                            </div>
+                        
+                    </div>
+                </div>
+
+                <div class="row">
+    <div class="col-md-12 animate-box">
+        
+    </div>
+</div>
+
             </div>
-          
-        </span>
-        <h3 class="fh5co-article-title">
-          <a href="https://bornindecember.github.io/post/an-zhuang-jupyter-notebook/">安装 jupyter notebook</a>
-        </h3>
-        <span class="fh5co-meta fh5co-date">2020-06-22</span>
-      </article>
-    
-    <div class="clearfix visible-lg-block visible-md-block visible-sm-block visible-xs-block"></div>
 
-  </div>
+        </article>
+    </div>
+</div>
 
-  <div class="pagination-box animate-box">
     
+
+    <!-- 返回顶部 -->
+    <div class="back-to-top">
     
-  </div>
+    <a href="#top" class="hidden-xs hidden-sm"><i class="fa fa-paper-plane"></i></a>
+</div>
+
+<div class="post-toc animated fadeInRight hidden-xs hidden-sm" style="display: none;">
+    
 </div>
 
 
+    
 <footer id="fh5co-footer">
   <p>Copyright © 2020 December 的博客 </p>
 </footer>
 
 
-<!-- jQuery -->
+    <!-- jQuery -->
 <script src="https://bornindecember.github.io/media/scripts/jquery.min.js"></script>
 <!-- img lazy load -->
 <script src="https://bornindecember.github.io/media/scripts/jquery.lazyload.min.js"></script>
