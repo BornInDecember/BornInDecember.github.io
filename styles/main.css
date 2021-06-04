@@ -379,11 +379,11 @@ p {
   }
 }
 .fh5co-post-entry.single-entry .fh5co-article-title {
-  font-size: 80px;
+  font-size: 40px;
 }
 @media screen and (max-width: 992px) {
   .fh5co-post-entry.single-entry .fh5co-article-title {
-    font-size: 56px;
+    font-size: 26px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -850,7 +850,7 @@ figure figcaption {
 .fh5co-article-title a {
   text-decoration: none;
   color: #0C1E29;
-  line-height: 1.5em;
+  line-height: 0.1em;
 }
 .fh5co-article-title a:hover {
   color: #92abf5;
