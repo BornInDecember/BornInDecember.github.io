@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bornindecember.github.io</id>
     <title>戴珠珠的图册~~</title>
-    <updated>2021-06-04T05:25:44.328Z</updated>
+    <updated>2021-07-13T13:01:02.555Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bornindecember.github.io"/>
     <link rel="self" href="https://bornindecember.github.io/atom.xml"/>
@@ -10,6 +10,145 @@
     <logo>https://bornindecember.github.io/images/avatar.png</logo>
     <icon>https://bornindecember.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 戴珠珠的图册~~</rights>
+    <entry>
+        <title type="html"><![CDATA[热图拼图-待优化]]></title>
+        <id>https://bornindecember.github.io/post/re-tu-pin-tu-dai-you-hua/</id>
+        <link href="https://bornindecember.github.io/post/re-tu-pin-tu-dai-you-hua/">
+        </link>
+        <updated>2021-06-09T08:18:53.000Z</updated>
+        <content type="html"><![CDATA[<pre><code>library(ggplot2)
+library(tidyverse)
+library(reshape2)
+library(RColorBrewer)
+
+clinical.df=data.frame(
+  patient=paste(&quot;P&quot;,seq(1:15),sep = &quot;&quot;),
+  gender=sample(c(&quot;male&quot;,&quot;female&quot;),15,replace = T),
+  symptom=sample(c(&quot;mild&quot;,&quot;moderate&quot;,&quot;severe&quot;),15,replace = T),
+  RNAseq=sample(c(&quot;yes&quot;,&quot;no&quot;),15,replace = T),
+  WES=sample(c(&quot;yes&quot;,&quot;no&quot;),15,replace = T)
+)
+clinical.df1=data.frame(
+  patient=paste(&quot;P&quot;,seq(1:15),sep = &quot;&quot;),
+  age=sample(20:80,15,replace = T)
+)
+clinical.df4=data.frame(
+  patient=paste(&quot;P&quot;,seq(1:15),sep = &quot;&quot;),
+  age0=sample(30:100,15,replace = T)
+)
+clinical.df2=melt(clinical.df,id=&quot;patient&quot;)
+clinical.df3=melt(clinical.df1,id=&quot;patient&quot;)
+clinical.df5=melt(clinical.df4,id=&quot;patient&quot;)
+cols=c(
+  &quot;level1&quot;=&quot;#E5F5E0&quot;,&quot;level2&quot;=&quot;#A1D99B&quot;,&quot;level3&quot;=&quot;#41AB5D&quot;,
+  &quot;male&quot;=&quot;#66C2A5&quot;,&quot;female&quot;=&quot;#FC8D62&quot;,
+  &quot;mild&quot;=&quot;#377EB8&quot;,&quot;moderate&quot;=&quot;#FFFF33&quot;,&quot;severe&quot;=&quot;#E41A1C&quot;,
+  &quot;yes&quot;=&quot;black&quot;,&quot;no&quot;=&quot;lightgrey&quot;
+)
+
+p1 &lt;- clinical.df2%&gt;%ggplot(aes(x=patient,y=variable))+
+  geom_tile(aes(fill=value),color=&quot;white&quot;,size=1)+ #color和size分别指定方块边线的颜色和粗细
+  scale_x_discrete(&quot;&quot;,expand = c(0,0))+ #不显示横纵轴的label文本；画板不延长
+  scale_y_discrete(&quot;&quot;,expand = c(0,0))+
+  scale_fill_manual(values = cols)+ #指定自定义的颜色
+  theme(
+    axis.text.x.bottom = element_text(size=10),axis.text.y.left = element_text(size = 12), #修改坐标轴文本大小
+    axis.ticks = element_blank(), #不显示坐标轴刻度
+    legend.title = element_blank() #不显示图例title
+  )
+
+p2 &lt;- clinical.df3%&gt;%ggplot(aes(x=patient,y=variable))+
+  geom_tile(aes(fill=value),color=&quot;white&quot;,size=1)+ #color和size分别指定方块边线的颜色和粗细
+  scale_x_discrete(&quot;&quot;,expand = c(0,0))+ #不显示横纵轴的label文本；画板不延长
+  scale_y_discrete(&quot;&quot;,expand = c(0,0))+
+  scale_fill_gradient(low = &quot;white&quot;, high = &quot;red&quot;,breaks=seq(30,90,10))+ #指定自定义的颜色
+  theme(
+    axis.text.x.bottom = element_text(size=10),axis.text.y.left = element_text(size = 12), #修改坐标轴文本大小
+    axis.ticks = element_blank(), #不显示坐标轴刻度
+    legend.title = element_blank() #不显示图例title
+  )
+p3 &lt;- clinical.df5%&gt;%ggplot(aes(x=patient,y=variable))+
+  geom_tile(aes(fill=value),color=&quot;white&quot;,size=1)+ #color和size分别指定方块边线的颜色和粗细
+  scale_x_discrete(&quot;&quot;,expand = c(0,0))+ #不显示横纵轴的label文本；画板不延长
+  scale_y_discrete(&quot;&quot;,expand = c(0,0))+
+  scale_fill_gradient(low = &quot;white&quot;, high = &quot;red&quot;,breaks=seq(30,90,10))+ #指定自定义的颜色
+  theme(
+    axis.text.x.bottom = element_text(size=10),axis.text.y.left = element_text(size = 12), #修改坐标轴文本大小
+    axis.ticks = element_blank(), #不显示坐标轴刻度
+    legend.title = element_blank() #不显示图例title
+  )
+p3
+p2
+p1
+library('aplot')
+p1%&gt;%insert_bottom(p2)%&gt;%insert_bottom(p3)
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[KEGG富集弦图]]></title>
+        <id>https://bornindecember.github.io/post/kegg-fu-ji-xian-tu/</id>
+        <link href="https://bornindecember.github.io/post/kegg-fu-ji-xian-tu/">
+        </link>
+        <updated>2021-06-04T05:32:22.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>用GOplot包画漂亮的GOChord图和bubble图https://www.jianshu.com/p/9bda0ab65717</p>
+</blockquote>
+<pre><code>if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))
+  install.packages(&quot;BiocManager&quot;)
+BiocManager::install(&quot;GOplot&quot;,ask = F,update = F)
+
+
+setwd(&quot;C:\\0Computer\\05G_Virtual\\KEGG弦图&quot;)
+david &lt;- read.delim(&quot;A_G_fat.vs.a_Z_fat.KEGG_Enrich.xls&quot;,sep = &quot;\t&quot;,header = T)
+genelist &lt;- read.delim(&quot;A_G_fat.vs.a_Z_fat.diff_prot.xls&quot;,sep = &quot;\t&quot;,header = T)
+genes &lt;- data.frame(genelist$ID,genelist$logFC)
+genes
+circ &lt;- circle_dat(david, genelist)
+hord &lt;- chord_dat(data = circ, genes = genes, process = EC$process)
+GOChord(chord, space = 0.02, gene.order = 'logFC', gene.space = 0.25, gene.size = 5)
+</code></pre>
+<pre><code>library(GOplot)
+pdf(&quot;wqqEprot1GO_4.pdf&quot;,height=30,width=32)
+circ&lt;-read.table(&quot;E_H.vs.C.diff_prot1_go.txt&quot;,header=T,sep='\t')
+index &lt;- duplicated(circ$genes)
+data&lt;-circ[!index,]
+genes &lt;- data.frame(data$genes,data$logFC)
+chord &lt;- chord_dat(data = circ, genes =genes,process=unique(circ$term))
+GOChord(chord, space = 0, gene.order = 'logFC',gene.space = 0.25, process.label = 18.0, label_titlename='GO Pathways', gene.size = 10.0,border.size=0)
+dev.off()
+</code></pre>
+<p>文件链接https://www.jianguoyun.com/p/DT_q6kwQoMLICRjhnfkD</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[复杂热图]]></title>
+        <id>https://bornindecember.github.io/post/fu-za-re-tu/</id>
+        <link href="https://bornindecember.github.io/post/fu-za-re-tu/">
+        </link>
+        <updated>2021-06-04T05:27:43.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>https://mp.weixin.qq.com/s/bRUUll5QBLs3iPRK1a-n_g 快来使用ggheatmap强化你的热图吧！</p>
+</blockquote>
+<pre><code>library(aplot)
+set.seed(123)
+df &lt;- matrix(runif(600,0,10),ncol = 12)
+colnames(df) &lt;- paste(&quot;sample&quot;,1:12,sep = &quot;&quot;)
+rownames(df) &lt;- sapply(1:50, function(x)paste(sample(LETTERS,3,replace = F),collapse = &quot;&quot;))
+head(df)
+dat &lt;- data.frame(marker=sample(c(1,NA),50,replace = T),
+                  gene=rownames(df),
+                  shape=sample(c(&quot;T&quot;,&quot;F&quot;),50,replace = T))
+p &lt;- ggplot(dat,aes(x=1,y=gene,size=marker,color=shape,shape=shape))+
+  geom_point()+theme_classic()+
+  scale_color_manual(values = c(&quot;#D2691E&quot;,&quot;#1E87D2&quot;))+
+  theme(line = element_blank(),axis.text = element_blank(),axis.title = element_blank())+
+  guides(size = FALSE)  
+
+ggheatmap%&gt;%insert_right(p,width = 0.1)
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ggplot2热图,带有范围值的颜色]]></title>
         <id>https://bornindecember.github.io/post/ggplot2-re-tu-dai-you-fan-wei-zhi-de-yan-se/</id>

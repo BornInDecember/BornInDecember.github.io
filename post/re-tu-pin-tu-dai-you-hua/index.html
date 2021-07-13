@@ -151,7 +151,7 @@
         <article class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
             <figure class="animate-box">
                 
-                    <img src="https://bornindecember.github.io/post-images/ggplot2-re-tu-dai-you-fan-wei-zhi-de-yan-se.png" alt="ggplot2热图,带有范围值的颜色" class="img-responsive">
+                    <img src="https://bornindecember.github.io/post-images/re-tu-pin-tu-dai-you-hua.png" alt="热图拼图-待优化" class="img-responsive">
                 
             </figure>
             <span class="fh5co-meta animate-box">
@@ -167,35 +167,82 @@
                     </div>
                 
             </span>
-            <h2 class="fh5co-article-title animate-box">ggplot2热图,带有范围值的颜色</h2>
+            <h2 class="fh5co-article-title animate-box">热图拼图-待优化</h2>
             <ol class="breadcrumb fh5co-meta fh5co-date animate-box" style="margin-bottom:0; background-color:#f8f9fa">
-                <li>2021-06-04</li>
-                <li>107字</li>
-                <li>1 min read</li>
+                <li>2021-06-09</li>
+                <li>604字</li>
+                <li>4 min read</li>
             </ol>
 
             <div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-left content-article">
                 <div class="row">
                     <div class="col-md-12 animate-box post-content">
-                        <p> <blockquote>
-<p>引用http://www.voidcn.com/article/p-gwnhvusn-bsz.html</p>
-</blockquote>
-<pre><code>set.seed(12345)
-dat &lt;- 
-  data.frame(
-      Row = rep(x = LETTERS[1:5], times = 10)
-    , Col = rep(x = LETTERS[1:10], each = 5)
-    , Y = rnorm(n = 50, mean = 0, sd = 1)
-    )
-library(ggplot2)
-p &lt;- ggplot(data =  dat, aes(x = Row, y = Col)) + 
-      geom_tile(aes(fill = Y), colour = &quot;white&quot;) +
-      scale_fill_gradient(low = &quot;white&quot;, high = &quot;steelblue&quot;)
-p
-dat$Y1 &lt;- cut(dat$Y,breaks = c(-Inf,-3:3,Inf),right = FALSE)
-ggplot(data =  dat, aes(x = Row, y = Col)) + 
-      geom_tile(aes(fill = Y1), colour = &quot;white&quot;) +
-      scale_fill_brewer(palette = &quot;PRGn&quot;)
+                        <p> <pre><code>library(ggplot2)
+library(tidyverse)
+library(reshape2)
+library(RColorBrewer)
+
+clinical.df=data.frame(
+  patient=paste(&quot;P&quot;,seq(1:15),sep = &quot;&quot;),
+  gender=sample(c(&quot;male&quot;,&quot;female&quot;),15,replace = T),
+  symptom=sample(c(&quot;mild&quot;,&quot;moderate&quot;,&quot;severe&quot;),15,replace = T),
+  RNAseq=sample(c(&quot;yes&quot;,&quot;no&quot;),15,replace = T),
+  WES=sample(c(&quot;yes&quot;,&quot;no&quot;),15,replace = T)
+)
+clinical.df1=data.frame(
+  patient=paste(&quot;P&quot;,seq(1:15),sep = &quot;&quot;),
+  age=sample(20:80,15,replace = T)
+)
+clinical.df4=data.frame(
+  patient=paste(&quot;P&quot;,seq(1:15),sep = &quot;&quot;),
+  age0=sample(30:100,15,replace = T)
+)
+clinical.df2=melt(clinical.df,id=&quot;patient&quot;)
+clinical.df3=melt(clinical.df1,id=&quot;patient&quot;)
+clinical.df5=melt(clinical.df4,id=&quot;patient&quot;)
+cols=c(
+  &quot;level1&quot;=&quot;#E5F5E0&quot;,&quot;level2&quot;=&quot;#A1D99B&quot;,&quot;level3&quot;=&quot;#41AB5D&quot;,
+  &quot;male&quot;=&quot;#66C2A5&quot;,&quot;female&quot;=&quot;#FC8D62&quot;,
+  &quot;mild&quot;=&quot;#377EB8&quot;,&quot;moderate&quot;=&quot;#FFFF33&quot;,&quot;severe&quot;=&quot;#E41A1C&quot;,
+  &quot;yes&quot;=&quot;black&quot;,&quot;no&quot;=&quot;lightgrey&quot;
+)
+
+p1 &lt;- clinical.df2%&gt;%ggplot(aes(x=patient,y=variable))+
+  geom_tile(aes(fill=value),color=&quot;white&quot;,size=1)+ #color和size分别指定方块边线的颜色和粗细
+  scale_x_discrete(&quot;&quot;,expand = c(0,0))+ #不显示横纵轴的label文本；画板不延长
+  scale_y_discrete(&quot;&quot;,expand = c(0,0))+
+  scale_fill_manual(values = cols)+ #指定自定义的颜色
+  theme(
+    axis.text.x.bottom = element_text(size=10),axis.text.y.left = element_text(size = 12), #修改坐标轴文本大小
+    axis.ticks = element_blank(), #不显示坐标轴刻度
+    legend.title = element_blank() #不显示图例title
+  )
+
+p2 &lt;- clinical.df3%&gt;%ggplot(aes(x=patient,y=variable))+
+  geom_tile(aes(fill=value),color=&quot;white&quot;,size=1)+ #color和size分别指定方块边线的颜色和粗细
+  scale_x_discrete(&quot;&quot;,expand = c(0,0))+ #不显示横纵轴的label文本；画板不延长
+  scale_y_discrete(&quot;&quot;,expand = c(0,0))+
+  scale_fill_gradient(low = &quot;white&quot;, high = &quot;red&quot;,breaks=seq(30,90,10))+ #指定自定义的颜色
+  theme(
+    axis.text.x.bottom = element_text(size=10),axis.text.y.left = element_text(size = 12), #修改坐标轴文本大小
+    axis.ticks = element_blank(), #不显示坐标轴刻度
+    legend.title = element_blank() #不显示图例title
+  )
+p3 &lt;- clinical.df5%&gt;%ggplot(aes(x=patient,y=variable))+
+  geom_tile(aes(fill=value),color=&quot;white&quot;,size=1)+ #color和size分别指定方块边线的颜色和粗细
+  scale_x_discrete(&quot;&quot;,expand = c(0,0))+ #不显示横纵轴的label文本；画板不延长
+  scale_y_discrete(&quot;&quot;,expand = c(0,0))+
+  scale_fill_gradient(low = &quot;white&quot;, high = &quot;red&quot;,breaks=seq(30,90,10))+ #指定自定义的颜色
+  theme(
+    axis.text.x.bottom = element_text(size=10),axis.text.y.left = element_text(size = 12), #修改坐标轴文本大小
+    axis.ticks = element_blank(), #不显示坐标轴刻度
+    legend.title = element_blank() #不显示图例title
+  )
+p3
+p2
+p1
+library('aplot')
+p1%&gt;%insert_bottom(p2)%&gt;%insert_bottom(p3)
 </code></pre>
  </p>
                     </div>
@@ -203,6 +250,15 @@ ggplot(data =  dat, aes(x = Row, y = Col)) +
 
                 <div class="row">
                     <div class="col-md-12 animate-box">
+                        
+                            <div class="next-post">
+                                <div class="next">下一篇</div>
+                                <a href="https://bornindecember.github.io/post/kegg-fu-ji-xian-tu/">
+                                    <h3 class="post-title">
+                                        KEGG富集弦图
+                                    </h3>
+                                </a>
+                            </div>
                         
                     </div>
                 </div>

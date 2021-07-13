@@ -35,7 +35,7 @@
 
 </head>
 <body>
-<div id="fh5co-offcanvas">
+    <div id="fh5co-offcanvas">
     <a href="#!" class="fh5co-close-offcanvas js-fh5co-close-offcanvas">
         <span><i class="icon-cross3"></i> <span>Close</span></span>
     </a>
@@ -141,82 +141,115 @@
 </header>
 
 
-<div class="container-fluid">
-    <div class="row fh5co-post-entry single-entry">
-        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0 animate-box">
+    <!--  <a href="#" class="fh5co-post-prev"><span>👈 Prev</span></a>-->
+    <!--  <a href="#" class="fh5co-post-next"><span>Next 👉</span></a>-->
 
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-2 col-sm-10 col-sm-offset-2 col-xs-12 col-xs-offset-0 text-center content-article">
+    <!-- 等gridea出自定义页面功能再优化一下 -->
+    
+        <div class="container-fluid">
+    <div class="row fh5co-post-entry single-entry">
+        <article class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
+            <figure class="animate-box">
+                
+                    <img src="https://bornindecember.github.io/post-images/fu-za-re-tu.png" alt="复杂热图" class="img-responsive">
+                
+            </figure>
+            <span class="fh5co-meta animate-box">
+                
+                    <div class="tag-container">
+                        
+                            <a href="https://bornindecember.github.io/tag/6Y8_bnMC7/" class="tag">aplot, </a>
+                        
+                            <a href="https://bornindecember.github.io/tag/aOXQJo1g_/" class="tag">ggplot2, </a>
+                        
+                            <a href="https://bornindecember.github.io/tag/XbbP5rSgM/" class="tag">热图, </a>
+                        
+                            <a href="https://bornindecember.github.io/tag/82VCyGO_x/" class="tag">R, </a>
+                        
+                    </div>
+                
+            </span>
+            <h2 class="fh5co-article-title animate-box">复杂热图</h2>
+            <ol class="breadcrumb fh5co-meta fh5co-date animate-box" style="margin-bottom:0; background-color:#f8f9fa">
+                <li>2021-06-04</li>
+                <li>137字</li>
+                <li>1 min read</li>
+            </ol>
+
+            <div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-left content-article">
+                <div class="row">
+                    <div class="col-md-12 animate-box post-content">
+                        <p> <blockquote>
+<p>https://mp.weixin.qq.com/s/bRUUll5QBLs3iPRK1a-n_g 快来使用ggheatmap强化你的热图吧！</p>
+</blockquote>
+<pre><code>library(aplot)
+set.seed(123)
+df &lt;- matrix(runif(600,0,10),ncol = 12)
+colnames(df) &lt;- paste(&quot;sample&quot;,1:12,sep = &quot;&quot;)
+rownames(df) &lt;- sapply(1:50, function(x)paste(sample(LETTERS,3,replace = F),collapse = &quot;&quot;))
+head(df)
+dat &lt;- data.frame(marker=sample(c(1,NA),50,replace = T),
+                  gene=rownames(df),
+                  shape=sample(c(&quot;T&quot;,&quot;F&quot;),50,replace = T))
+p &lt;- ggplot(dat,aes(x=1,y=gene,size=marker,color=shape,shape=shape))+
+  geom_point()+theme_classic()+
+  scale_color_manual(values = c(&quot;#D2691E&quot;,&quot;#1E87D2&quot;))+
+  theme(line = element_blank(),axis.text = element_blank(),axis.title = element_blank())+
+  guides(size = FALSE)  
+
+ggheatmap%&gt;%insert_right(p,width = 0.1)
+</code></pre>
+ </p>
+                    </div>
+                </div>
 
                 <div class="row">
-
-                    
-                    <h2 class="text-center archives-title">
-                        <i class="fa fa-archive"></i> 文章归档
-                    </h2>
-
-                    
-                    <div class="row post-group">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xs-offset-0 text-center post-year tag-title">
-                            <h3>2021</h3>
-                        </div>
-
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xs-offset-0 text-left">
-                            <ul class="post-list">
-                            
-                                
-                                <li class="post-item">
-                                    <a href="https://bornindecember.github.io/post/re-tu-pin-tu-dai-you-hua/" target="_blank">
-                                        <span class="post-title">热图拼图-待优化</span>
-                                        <span class="post-day">2021-06-09</span>
-                                    </a>
-                                </li>
-                                
-                            
-                                
-                                <li class="post-item">
-                                    <a href="https://bornindecember.github.io/post/kegg-fu-ji-xian-tu/" target="_blank">
-                                        <span class="post-title">KEGG富集弦图</span>
-                                        <span class="post-day">2021-06-04</span>
-                                    </a>
-                                </li>
-                                
-                            
-                                
-                                <li class="post-item">
-                                    <a href="https://bornindecember.github.io/post/fu-za-re-tu/" target="_blank">
-                                        <span class="post-title">复杂热图</span>
-                                        <span class="post-day">2021-06-04</span>
-                                    </a>
-                                </li>
-                                
-                            
-                                
-                                <li class="post-item">
-                                    <a href="https://bornindecember.github.io/post/ggplot2-re-tu-dai-you-fan-wei-zhi-de-yan-se/" target="_blank">
-                                        <span class="post-title">ggplot2热图,带有范围值的颜色</span>
-                                        <span class="post-day">2021-06-04</span>
-                                    </a>
-                                </li>
-                                
-                            
-                            </ul>
-                        </div>
+                    <div class="col-md-12 animate-box">
+                        
+                            <div class="next-post">
+                                <div class="next">下一篇</div>
+                                <a href="https://bornindecember.github.io/post/ggplot2-re-tu-dai-you-fan-wei-zhi-de-yan-se/">
+                                    <h3 class="post-title">
+                                        ggplot2热图,带有范围值的颜色
+                                    </h3>
+                                </a>
+                            </div>
+                        
                     </div>
-                    
-
                 </div>
-            </div>
-        </div>
+
+                <div class="row">
+    <div class="col-md-12 animate-box">
+        
     </div>
 </div>
 
+            </div>
 
+        </article>
+    </div>
+</div>
+
+    
+
+    <!-- 返回顶部 -->
+    <div class="back-to-top">
+    
+    <a href="#top" class="hidden-xs hidden-sm"><i class="fa fa-paper-plane"></i></a>
+</div>
+
+<div class="post-toc animated fadeInRight hidden-xs hidden-sm" style="display: none;">
+    
+</div>
+
+
+    
 <footer id="fh5co-footer">
   <p>Copyright © 2020 December 的博客 </p>
 </footer>
 
 
-<!-- jQuery -->
+    <!-- jQuery -->
 <script src="https://bornindecember.github.io/media/scripts/jquery.min.js"></script>
 <!-- img lazy load -->
 <script src="https://bornindecember.github.io/media/scripts/jquery.lazyload.min.js"></script>
